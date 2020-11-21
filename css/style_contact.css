@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container {
+    width: 95%; /* So that it's responseive */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* HEADER */
+
+.header {
+    background: black;
+    padding: 15px 30px 15px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.header a {
+    color: white;
+    text-decoration: none ;
+    /* text-transform: lowercase; */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+    float: left;
+}
+
+.contact {
+    border: solid;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+    border: solid;
+    border-color: white;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header li{
+    float: right;
+    display: inline;
+}
+
+
+
+/* HOME */
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+    width: auto;
+}
+
+.intro-text {
+    margin-top: 20%;
+    margin-bottom: 0;
+    text-align: center;
+    width: auto;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.home p {
+    width: auto;
+    text-align: center;
+}
+
+.descriptor {
+    margin: auto;
+}
+
+
+/* Might be irrelevant now */ 
+.descriptor {
+    width: 10%;
+}
+
+
+.fullscreen-video-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.fullscreen-video-wrap > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-video-wrap > video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-video-wrap > video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@supports (object-fit: cover) {
+    .fullscreen-video-wrap > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: black;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.home-content {
+    width: 95%; /* So that it's responseive */
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+
+    z-index: 2;
+    color: white;
+}
+
+.home-content {
+    display: inline;
+}
+
+/*Adding the cursor */
+.txt-type > .txt {
+    border-right: 0.2rem solid white;
+    animation: blinkTextCursor 1s infinite;
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255,255,255,1);
+    } to {
+        border-right-color: rgba(255,255,255,0);
+    }
+}
+
+
+/* Social media buttons */
+
+.icon-container {
+    width: 50%;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+}
+
+.home-content a {
+    font-size: 25px;
+    width: auto;
+    height: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/* Set all the backgrounds to dark blue */ 
+
+.fa-envelope-square {
+    color: white;
+}
+  
+.fa-linkedin {
+    color: white;
+}
+
+.fa-github {
+    color: white;
+}
+
+.fa-file-pdf-o {
+    color: white;
+}
+
+/* Set a specific color for each brand when you hover over */
+
+
+.fa-envelope-square:hover {
+    background: #BF3F32;
+    transition: 0.4s;
+}
+
+.fa-linkedin:hover {
+    background: #2867B2;
+    transition: 0.4s;
+}
+
+.fa-github:hover {
+    background: white;
+    color: black;
+    transition: 0.4s;
+}
+
+.fa-file-pdf-o:hover {
+    background: white;
+    color: black;
+    transition: 0.4s;
+}
+
+
+
+
+
+  

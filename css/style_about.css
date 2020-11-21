@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container {
+    width: 95%; /* So that it's responseive */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* HEADER */
+
+.header {
+    background: black;
+    padding: 15px 30px 15px 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.header a {
+    color: white;
+    text-decoration: none ;
+    /* text-transform: lowercase; */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+    float: left;
+}
+
+.contact {
+    border: solid;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+    border: solid;
+    border-color: white;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header li{
+    float: right;
+    display: inline;
+}
+
+
+
+/* --------- HOME ---------- */
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Irrelevant for now */
+.home h1 {
+    margin-top: 2px;
+    font-size: 48px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.subtitle {
+    margin: 0;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.footer {
+    margin: 0;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 2%;
+    text-align: right;
+}
+
+.fullscreen-video-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.fullscreen-video-wrap > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-video-wrap > video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-video-wrap > video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@supports (object-fit: cover) {
+    .fullscreen-video-wrap > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.entry {
+    border: solid;
+    border-width: thin;
+    color: white;
+    border-radius: 5px;
+    padding: 1%;
+    font-size: small;
+    width: 43%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.entry:hover {
+    background: white;
+    color: black;
+    transition: 0.4s;
+}
+
+.title {
+    margin:0;
+    font-size: small;
+    font-style: italic;
+}
+
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: black;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.home-content {
+    width: 95%; /* So that it's responseive */
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+
+    z-index: 2;
+    color: white;
+}
+
+
+.home-content {
+    display: inline;
+}
+
+/*Adding the cursor */
+.txt-type > .txt {
+    border-right: 0.2rem solid white;
+    animation: blinkTextCursor 1s infinite;
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255,255,255,1);
+    } to {
+        border-right-color: rgba(255,255,255,0);
+    }
+}
+
+
+/* Social media buttons */
+
+.icon-container {
+    width: 40%;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: white;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+}
+
+.icon-container a {
+    font-size: 25px;
+    width: auto;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* Set all the backgrounds to dark blue */ 
+
+.fa-github {
+    color: white;
+}
+
+/* Set a specific color for each brand when you hover over */
+
+.fa-github:hover {
+    background: white;
+    color: black;
+    transition: 0.4s;
+}
+
+
+/* Spotify player */
+
+.spotify {
+    border: solid;
+    border-color: black;
+}
+
+
+
+

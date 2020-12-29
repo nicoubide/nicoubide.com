@@ -192,7 +192,7 @@ body {
 .portfolio {
     display: grid;
     width: 100%;
-    height: 60%;
+    height: 55%;
     grid-template-columns: 50% 50%;
     grid-template-rows: 5% 28% 5% 28% 5% 28%;
     justify-items: center;
@@ -235,6 +235,10 @@ body {
     font-size: small;
 }
 
+.all-entries b {
+    font-weight: 900;
+}
+
 @media screen and (max-width: 1280px) {
     .all-entries p {
         font-size: x-small;
@@ -259,7 +263,6 @@ a {
     text-decoration: none;
     color: white;
 }
-
 
 
 /*Adding the cursor */

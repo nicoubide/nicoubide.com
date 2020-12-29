@@ -235,6 +235,15 @@ body {
     font-size: small;
 }
 
+@media screen and (max-width: 1280px) {
+    .all-entries p {
+        font-size: x-small;
+    }
+    .all-entries a {
+        font-size: x-small;
+    }
+}
+
 .all-entries:hover {
     background: white;
     color: black;
@@ -250,6 +259,8 @@ a {
     text-decoration: none;
     color: white;
 }
+
+
 
 /*Adding the cursor */
 .txt-type > .txt {
@@ -289,6 +300,12 @@ a {
     height: auto;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
+}
+
+@media screen and (max-width: 1280px) {
+    .icon-container a {
+        font-size: 20px;
+    }
 }
 
 /* Set all the backgrounds to dark blue */ 

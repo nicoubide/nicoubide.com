@@ -81,6 +81,7 @@ body {
     margin-top: 2px;
     font-size: 48px;
     margin-bottom: 2px;
+    margin-left: 6%;
 }
 
 .subtitle {
@@ -92,6 +93,7 @@ body {
 
 .footer {
     margin: 0;
+    margin-left: 6%;
     font-style: italic;
     font-size: small;
     margin-bottom: 1%;
@@ -152,31 +154,28 @@ body {
 }
 
 .home-content {
-    width: 95%; /* So that it's responseive */
-    padding-left: 3rem;
-    padding-right: 3rem;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     text-align: left;
-
     z-index: 2;
     color: white;
 }
 
 .entry-title {
-    width: 43%;
+    width: 75%;
     font-size: small;
 }
 
 .entry-title p {
-    float: right;
-    font-style: normal;
     margin: 0;
 }
 
+
+
 /* adding white dividing lines */
-.entry-1, .entry-2, .entry-3 {
-    width: 43%;
+.all-entries {
+    width: 75%;
     border: solid;
     border-width: thin;
     color: white;
@@ -188,31 +187,68 @@ body {
     margin-bottom: 2%;
 }
 
-.entry-1 p, .entry-2 p, .entry-3 p {
-    font-size: 10px;
+/* WIP */
+
+.portfolio {
+    display: grid;
+    width: 100%;
+    height: 60%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5% 28% 5% 28% 5% 28%;
+    justify-items: center;
+}
+
+.entry-1 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.entry-2 {
+    grid-column: 1;
+    grid-row: 4;
+}
+.entry-3 {
+    grid-column: 1;
+    grid-row: 6;
+}
+.entry-4 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.entry-5 {
+    grid-column: 2;
+    grid-row: 4;
+}
+.entry-6 {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+.all-entries p {
+    font-size: small;
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-right: 5%;
 }
 
-.entry-1 a, .entry-2 a, .entry-3 a {
-    font-size: 10px;
+.all-entries a {
+    font-size: small;
 }
 
-.entry-1:hover, .entry-2:hover, .entry-3:hover {
+.all-entries:hover {
     background: white;
     color: black;
     transition: 0.4s;
 }
 
-.entry-1:hover a, .entry-2:hover a, .entry-3:hover a {
+.all-entries:hover a {
     transition: 0.4s;
     color: blue;
 }
 
-.home-content {
-    display: inline;
+a {
+    text-decoration: none;
+    color: white;
 }
 
 /*Adding the cursor */
@@ -233,12 +269,13 @@ body {
 /* Social media buttons */
 
 .icon-container {
-    width: 43%;
+    width: 88%;
     border-top: solid;
     border-bottom: solid;
     border-color: white;
     display: grid;
     grid-template-columns: auto;
+    margin-left: 6%;
 }
 
 .fa {
@@ -250,8 +287,8 @@ body {
     font-size: 25px;
     width: auto;
     height: auto;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 /* Set all the backgrounds to dark blue */ 
